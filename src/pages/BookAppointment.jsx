@@ -7,25 +7,68 @@ const BookAppointment = () => {
   useEffect(() => {
     // Handle color changes based on the current step
     // You can customize the colors as needed
-    const satuDiv = document.querySelector(".satu");
-    const duaDiv = document.querySelector(".dua");
-    const tigaDiv = document.querySelector(".tiga");
+    const divAngka1 = document.querySelector(".angka1")
+    const divAngka2 = document.querySelector(".angka2")
+    const divAngka3 = document.querySelector(".angka3")
+
+    const divText1 = document.querySelector(".text1")
+    const divText2 = document.querySelector(".text2")
+    const divText3 = document.querySelector(".text3")
 
     switch (currentStep) {
       case 1:
-        satuDiv.style.backgroundColor = "yellow";
-        duaDiv.style.backgroundColor = "";
-        tigaDiv.style.backgroundColor = "";
+        divAngka3.style.color = ""
+        divAngka3.style.backgroundColor = "";
+        divAngka3.style.padding = "10px";
+        divAngka3.style.borderRadius = "20px";
+        divAngka2.style.color = "";
+        divAngka2.style.backgroundColor = "";
+        divAngka2.style.padding = "10px";
+        divAngka2.style.borderRadius = "20px";
+        divAngka1.style.color = "#ffffff";
+        divAngka1.style.backgroundColor = "#E99006";
+        divAngka1.style.padding = "10px";
+        divAngka1.style.borderRadius = "20px";
+
+        divText1.style.color = "#E99006"
+        divText2.style.color = ""
+        divText3.style.color = ""
         break;
       case 2:
-        satuDiv.style.backgroundColor = "yellow";
-        duaDiv.style.backgroundColor = "yellow";
-        tigaDiv.style.backgroundColor = "";
+        divAngka3.style.color = ""
+        divAngka3.style.backgroundColor = "";
+        divAngka3.style.padding = "10px";
+        divAngka3.style.borderRadius = "20px";
+        divAngka2.style.color = "#ffffff";
+        divAngka2.style.backgroundColor = "#E99006";
+        divAngka2.style.padding = "10px";
+        divAngka2.style.borderRadius = "20px";
+        divAngka1.style.color = "#ffffff";
+        divAngka1.style.backgroundColor = "#E99006";
+        divAngka1.style.padding = "10px";
+        divAngka1.style.borderRadius = "20px";
+
+        divText1.style.color = "#E99006"
+        divText2.style.color = "#E99006"
+        divText3.style.color = ""
         break;
       case 3:
-        satuDiv.style.backgroundColor = "yellow";
-        duaDiv.style.backgroundColor = "yellow";
-        tigaDiv.style.backgroundColor = "yellow";
+        divAngka3.style.color = "#ffffff"
+        divAngka3.style.backgroundColor = "#E99006";
+        divAngka3.style.padding = "10px";
+        divAngka3.style.borderRadius = "20px";
+        divAngka2.style.color = "#ffffff";
+        divAngka2.style.backgroundColor = "#E99006";
+        divAngka2.style.padding = "10px";
+        divAngka2.style.borderRadius = "20px";
+        divAngka1.style.color = "#ffffff";
+        divAngka1.style.backgroundColor = "#E99006";
+        divAngka1.style.padding = "10px";
+        divAngka1.style.borderRadius = "20px";
+
+        divText1.style.color = "#E99006"
+        divText2.style.color = "#E99006"
+        divText3.style.color = "#E99006"
         break;
       default:
         break;
@@ -54,18 +97,18 @@ const BookAppointment = () => {
           <Col lg="12">
             <div className="d-flex justify-content-between text-center">
               <div className="satu">
-                <p>1</p>
-                <p>Pilih Dokter</p>
+                <p className="angka1">1</p>
+                <p className="text1">Pilih Dokter</p>
               </div>
               <div className="garis"></div>
               <div className="dua">
-                <p>2</p>
-                <p>Isi Data Pasien</p>
+                <p className="angka2">2</p>
+                <p className="text2">Isi Data Pasien</p>
               </div>
               <div className="garis"></div>
               <div className="tiga">
-                <p>3</p>
-                <p>Appointment</p>
+                <p className="angka3">3</p>
+                <p className="text3">Appointment</p>
               </div>
             </div>
           </Col>
@@ -76,25 +119,17 @@ const BookAppointment = () => {
           </Col>
         </Row>
         <Row className="searchDoctor pt-3">
-          <Col lg="9">
+          <Col lg="10">
             <Form>
               <FormControl type="text" placeholder="Search for a doctor" />
             </Form>
           </Col>
-          <Col lg="3">
+          <Col lg="2">
             <Nav className="ms-auto justify-content-end">
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
+              <NavDropdown title="Jenis Dokter" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">doctor gigi</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">doctor penyakit dalam</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">doctor saraf</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Col>
