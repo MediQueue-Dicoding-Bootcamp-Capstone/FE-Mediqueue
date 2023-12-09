@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body, html{
+    height: 100%;
+    margin: 0;
+}
+
+#root { 
+    height: 100%;
+}
+
+:root {
+    --dark-blue: #082743; 
+    --light-grey: #f1f2f5; 
+    --orange: #e99006;
+}
+
+.contact-input h3,
+.contact-input input, 
+.forget-password-signin, 
+.sign-up {
+    font-size: 1rem;
+}
+
+.login-app {
+    height: 100%; 
+    font-family: 'Inter', sans-serif;
+}
+
+.login-page__form {
+    background-color: var(--light-grey);
+}
+
+.login-page__logo {
+    background-color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+h1, h3 {
+    margin-bottom: 8px;
+}
+
+.forget-password-signin {
+    display: flex;
+    font-size: 0.9rem;
+    flex-direction: row;
+    align-items: center;
+}
+
+.forget-password-signin p a {
+    color: blue;
+    text-decoration: none;
+}
+
+.forget-password-signin button {
+    width: 14rem;
+    margin-left: auto;
+    height: 2.5rem;
+}
+
+.contact-input {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin-top: 10%;
+}
+
+.contact-input button {
+    background-color: var(--orange);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-input h1 {
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--dark-blue);
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+.contact-input input {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.contact-input input::placeholder {
+    color: #cdcdcd; 
+}
+
+.contact-input button {
+    background-color: var(--orange);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sign-up {
+    background-color: #ebd3aa;
+    padding-top: 0.7rem;
+    margin-top: 6rem;
+    border: 1px solid var(--orange);
+    border-radius: 7px;
+    text-align: center;
+    color: var(--orange);
+}
+
+.sign-up a {
+    color: var(--orange);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+#sign-in{
+    text-align: center;
+    color: var(--dark-blue);
+    margin-bottom: 50px;
+}
+
+#sign-in-btn{
+    float: right;
+    width: 250px;
+}
+
+#div-forget-signin{
+    margin-top: 10px;
+}
+
+/*Register Page*/
+
+.name-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-inputs div {
+    width: 50%; 
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.terms-checkbox label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0; 
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    margin-bottom: 0;
+}
+
+.terms-checkbox label a {
+    margin-left: 4px;
+}
+
+.register-app {
+    font-family: 'Inter', sans-serif;
+}
+
+@media screen and (max-width: 915px) {
+    .name-inputs input {
+        width: 8rem;
+    }
+}
+
+@media screen and (min-width: 975px) {
+    .row {
+        min-height: 595px;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .name-inputs input {
+        width: 10rem;
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .name-inputs input {
+        width: 13rem;
+    }
+}
