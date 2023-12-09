@@ -10,12 +10,14 @@ function App() {
   console.log (pathname)
   return (
     <div>
-    {pathname =='/bookappointment' ? <NavbarComponent/> : null}
+    {/* pathname =='/bookappointment' ? <NavbarComponent/> : null */}
+    <NavbarComponent/>
     <Routes>
     <Route path='/' Component={LandingPage}></Route>
     <Route path='/bookappointment' Component={BookAppointment}></Route>
     </Routes>
-    {pathname =='/bookappointment' ? <FooterComponent/> : null}
+    <FooterComponent></FooterComponent>
+    {/* pathname =='/bookappointment' ? <FooterComponent/> : null */}
     </div>
   )
 }

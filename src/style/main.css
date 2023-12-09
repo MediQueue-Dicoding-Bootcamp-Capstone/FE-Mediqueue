@@ -254,3 +254,9 @@
 .appointment-top {
     padding-top: 150px;
 }
+
+.garis {
+    border-bottom: 4px solid black;
+    width: 200px;
+    margin-bottom: 40px;
+}
