@@ -6,14 +6,16 @@ import FooterComponent from './components/FooterComponent'
 import BookAppointment from './pages/BookAppointment'
 
 function App() {
+  const pathname = window.location.pathname
+  console.log (pathname)
   return (
     <div>
-    <NavbarComponent/>
+    {pathname =='/bookappointment' ? <NavbarComponent/> : null}
     <Routes>
     <Route path='/' Component={LandingPage}></Route>
     <Route path='/bookappointment' Component={BookAppointment}></Route>
     </Routes>
-    <FooterComponent/>
+    {pathname =='/bookappointment' ? <FooterComponent/> : null}
     </div>
   )
 }
