@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+:root {
+    --dominanColor: #082743;
+    --primaryColor: #E99006;
+    --secondaryColor: #EFD5AD;
+    --whiteColor: #DFE8E9;
+    --blackColor: #111111;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.primary-button {
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 22px;
+    font-size: 18px;
+    line-height: 27px;
+    min-width: 100px;
+}
+
+.primary-button:hover {
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    padding: 10px 20px;
+    border: none;
+}
+
+.secondary-button {
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 22px;
+    font-size: 18px;
+    line-height: 27px;
+    min-width: 100px;
+}
+
+.secondary-button:hover {
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+}
+
+/* navbar start */
+.navbar {
+    background-color: var(--dominanColor);
+    border-bottom: var(--whiteColor) 2px solid;
+}
+
+.navlink {
+    position: relative;
+    color: var(--whiteColor);
+}
+
+.navlink::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--primaryColor);
+    border-radius: 20px;
+    position: absolute;
+    bottom: 6px;
+    left: 8px;
+    transition: all .3s ease-in-out;
+}
+
+.navlink:hover {
+    color: var(--secondaryColor);
+}
+
+.navlink.active {
+    color: var(--primaryColor) !important;
+    font-weight: 500;
+    position: relative;
+}
+
+.navlink.active::before {
+    content: '';
+    width: 60%;
+    height: 2px;
+    background-color: var(--primaryColor);
+    border-radius: 20px;
+    position: absolute;
+    bottom: 6px;
+    left: 8px;
+}
+
+.btnwrapper {
+    gap: 12px;
+}
+/* navbar end */
+
+/* banner start */
+.carousel {
+    background-color: #082743;
+}
+
+.banner {
+    height: 100vh;
+    color: var(--whiteColor);
+}
+
+.banner span {
+    color: #2F8DAD;
+}
+
+/* Media Query for iPad */
+@media only screen and (max-width: 1024px) {
+    .banner {
+        flex-direction: column-reverse;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bannerimg {
+        width: 100%; /* Make the image full width on smaller screens */
+        margin-top: 100px;
+    }
+
+    .banner h1 {
+        text-align: center;
+        margin-top: 60px;
+    }
+}
+
+/* Media Query for iPhone */
+@media only screen and (max-width: 768px) {
+
+    .banner h1 {
+        text-align: center;
+        font-size: 1.5rem; /* Adjust the font size as needed */
+    }
+
+    .bannerimg {
+        width: 100%; /* Make the image full width on smaller screens */
+    }
+}
+/* banner end */
+
+/* doctors start */
+.card-doctor {
+    background-color: var(--dominanColor);
+    color: var(--whiteColor);
+    border: none;
+    cursor: pointer;
+}
+
+.card-doctor:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+/* doctors end */
+
+/* facilities start */
+
+@media only screen and (max-width: 1024px) {
+    .facility-top {
+        flex-direction: column-reverse;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .facility-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Media Query for iPhone */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* facilities end */
+
+
+/* footer start */
+.footer {
+    padding: 127px 100px;
+    background-color: var(--dominanColor);
+    color: var(--whiteColor);
+    justify-content: space-between;
+}
+
+.footer-bottom{
+    margin-top: 60px;
+    padding: 24px 0;
+    border-top: var(--whiteColor) solid 2px;
+}
+/* footer end */
+
+.cardPendaftaran {
+    background-color: #F1F2F5;
+    border-radius: 24px;
+    padding: 0;
+}
+
+.imgdeskripsi {
+    background-color: var(--dominanColor);
+    color: var(--whiteColor);
+    padding: 20px;
+    border-bottom-left-radius: 24px;
+}
+
+.imgDoctor {
+    border-top-left-radius: 24px;
+}
+
+.cardPendafatran-bottom {
+    padding: 20px;
+}
+
+.cardappointment {
+    background-color: #F1F2F5;
+    padding: 20px;
+    border-radius: 20px;
+    width: 1000px;
+}
+
+.cardleft {
+    height: 100%;
+}
+
+.card {
+    background-color: var(--dominanColor);
+    border: none;
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 25px;
+}
+
+.image {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 20px;
+}
+
+.section-bookappointment {
+    height: 100vh;
+}
+
+.appointment-top {
+    padding-top: 150px;
+}

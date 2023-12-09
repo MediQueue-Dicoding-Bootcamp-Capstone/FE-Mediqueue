@@ -16,10 +16,12 @@ const BookAppointment = () => {
                 <p>1</p>
                 <p>Pilih Dokter</p>
               </div>
+              <div className="garis" style={{ borderRight: '4px solid #DFE8E9' }}></div>
               <div className="dua">
                 <p>2</p>
                 <p>Isi Data Pasien</p>
               </div>
+              <div className="garis" style={{ borderRight: '4px solid #DFE8E9' }}></div>
               <div className="tiga">
                 <p>3</p>
                 <p>Appointment</p>
