@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Col, Container, Row, FormControl, InputGroup, Card, Button } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
 
 const PilihdoctorComponent = () => {
+  const [searchValue, setSearchValue] = useState("");
+  
   // Data dummy untuk doctor
   const doctors = [
     {
@@ -30,6 +33,14 @@ const PilihdoctorComponent = () => {
     },
   ];
 
+  const filteredDoctors = doctors.filter((doctor) =>
+    doctor.name.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
+  const handleSearchChange = (e) => {
+    setSearchValue(e.target.value);
+  };
+
   return (
     <Container className="mt-5">
       <Row>
@@ -43,12 +54,18 @@ const PilihdoctorComponent = () => {
             <InputGroup.Text style={{ border: "2px solid" }}>
               <Search />
             </InputGroup.Text>
-            <FormControl type="text" placeholder="Search Doctor" style={{ border: "2px solid" }} />
+            <FormControl
+              type="text"
+              placeholder="Search Doctor"
+              style={{ border: "2px solid" }}
+              value={searchValue}
+              onChange={handleSearchChange}
+            />
           </InputGroup>
         </Col>
       </Row>
       <Row className="mt-5 m-0">
-        {doctors.map((doctor) => (
+        {filteredDoctors.map((doctor) => (
           <Col key={doctor.id}>
             <Card className="card-doctor rounded-5" style={{ width: "18rem" }}>
               <Card.Img className="image-doctor rounded-top-5" variant="top" src={doctor.image} />
@@ -58,7 +75,7 @@ const PilihdoctorComponent = () => {
                   Specialty: {doctor.specialty}
                 </Card.Text>
                 <Button className="primary-button w-100" variant="primary">
-                  Go somewhere
+                  Book Appointment
                 </Button>
               </Card.Body>
             </Card>
