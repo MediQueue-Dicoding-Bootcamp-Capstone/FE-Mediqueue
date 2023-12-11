@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import NavbarComponent from './components/NavbarComponent'
 import FooterComponent from './components/FooterComponent'
-import BookAppointment from './pages/BookAppointment'
+import AppointmentPage from './pages/AppointmentPage'
 
 function App() {
   const pathname = window.location.pathname
@@ -14,7 +14,7 @@ function App() {
     <NavbarComponent/>
     <Routes>
     <Route path='/' Component={LandingPage}></Route>
-    <Route path='/bookappointment' Component={BookAppointment}></Route>
+    <Route path='/bookappointment' Component={AppointmentPage}></Route>
     </Routes>
     <FooterComponent></FooterComponent>
     {/* pathname =='/bookappointment' ? <FooterComponent/> : null */}

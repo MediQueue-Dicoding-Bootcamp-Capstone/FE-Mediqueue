@@ -93,6 +93,7 @@
 .btnwrapper {
     gap: 12px;
 }
+
 /* navbar end */
 
 /* banner start */
@@ -120,7 +121,8 @@
     }
 
     .bannerimg {
-        width: 100%; /* Make the image full width on smaller screens */
+        width: 100%;
+        /* Make the image full width on smaller screens */
         margin-top: 100px;
     }
 
@@ -135,13 +137,16 @@
 
     .banner h1 {
         text-align: center;
-        font-size: 1.5rem; /* Adjust the font size as needed */
+        font-size: 1.5rem;
+        /* Adjust the font size as needed */
     }
 
     .bannerimg {
-        width: 100%; /* Make the image full width on smaller screens */
+        width: 100%;
+        /* Make the image full width on smaller screens */
     }
 }
+
 /* banner end */
 
 /* doctors start */
@@ -156,6 +161,7 @@
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
+
 /* doctors end */
 
 /* facilities start */
@@ -178,9 +184,7 @@
 }
 
 /* Media Query for iPhone */
-@media only screen and (max-width: 768px) {
-
-}
+@media only screen and (max-width: 768px) {}
 
 /* facilities end */
 
@@ -193,11 +197,12 @@
     justify-content: space-between;
 }
 
-.footer-bottom{
+.footer-bottom {
     margin-top: 60px;
     padding: 24px 0;
     border-top: var(--whiteColor) solid 2px;
 }
+
 /* footer end */
 
 .cardPendaftaran {
@@ -259,4 +264,19 @@
     border-bottom: 4px solid #DFE8E9;
     width: 200px;
     margin-bottom: 40px;
+}
+
+.box {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.section-form {
+    background-color: #082743;
+    color: white;
+}
+
+.section-appointment {
+    margin-top: 160px;
 }
