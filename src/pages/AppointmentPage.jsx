@@ -85,10 +85,10 @@ const AppointmentPage = () => {
         </Row>
         <Row className="mt-5 gx-0">
           <Col className="text-center d-flex align-items-center justify-content-center">
-            {renderStep(1, "Pilih Dokter")}
+            {renderStep(1, "choose a doctor")}
           </Col>
           <Col className="text-center d-flex align-items-center justify-content-center">
-            {renderStep(2, "Isi Data Pasien")}
+            {renderStep(2, "patient data")}
           </Col>
           <Col className="text-center d-flex align-items-center justify-content-center">
             {renderStep(3, "Appointment")}
